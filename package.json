@@ -1,0 +1,22 @@
+{
+  "name": "halloween-fun",
+  "version": "1.0.0",
+  "description": "Halloween Costume Idea Board\r <br>\r MVP:\r <br>\r HOMEPAGE DISPLAYING ARRAY ALSO WAY TO LOGIN OR SIGNUP.\r <br>\r   *user reads page\r   <br>\r LOG IN/SIGN UP RENDERS PROFILE.\r <br>\r   *user creates profile\r   <br>\r PROFILE SHOWS INFO -- PROVIDES LINK TO CREATE COSTUME FOR HOMEPAGE ARRAY.\r <br>\r   *create profile\r   <br>\r COSTUME PAGE ALLOWS USER TO CREATE OBJECT.\r <br>\r     *create costume\r     <br>\r AFTER OBJECT CREATED USER ABLE TO EDIT OR DELETE ITEM.\r <br>\r   *edit costume\r   <br>\r   *delete costume\r   <br>",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papeders/halloween-fun.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/papeders/halloween-fun/issues"
+  },
+  "homepage": "https://github.com/papeders/halloween-fun#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
