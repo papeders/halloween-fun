@@ -2,6 +2,7 @@
 Halloween Costume Idea Board
 MVP:
 HOMEPAGE DISPLAYING ARRAY ALSO WAY TO LOGIN OR SIGNUP.
+<br>
   *user reads page
 LOG IN/SIGN UP RENDERS PROFILE.
   *user creates profile
