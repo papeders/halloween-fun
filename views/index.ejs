@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+	<body background="https://static6.depositphotos.com/1062918/669/v/600/depositphotos_6690819-stock-illustration-halloween-background.jpg">
+	<h1>Homepage!</h1>
+	<nav>
+		<a href="/costumes/new">Show the world your creation!</a>
+	</nav>
+	<% for (let i = 0; i < costumes.length; i++) { %>
+		<a href="/costumes/<%=i%>">
+			<p><%= costumes[i].name %></p>
+		</a>
+		<form action="/costumes/<%=i%>?_method=DELETE" method="POST">
+			<input type="submit" value="Delete your masterpiece?" />
+		</form>
+		<a href="/costumes/<%=i%>/edit">Edit your creation!</a>
+	<% } %>
+</body>
+</html>
