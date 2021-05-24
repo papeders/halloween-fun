@@ -6,9 +6,11 @@
     </head>
     <body>
         <h1>Halloween Fun!</h1>
-        <h2> <%= costume.name %> </h2>
+        <% if (costume) { %>
+        <h2> <%= costume.costumeName %> </h2>
         <br>
         <img src=<%= costume.img%> alt="Costume" /> 
         <p> <%= costume.description %> </p>
+       <% } %>
     </body>
 </html> 

@@ -7,17 +7,21 @@
 </head>
 	<body background="https://static6.depositphotos.com/1062918/669/v/600/depositphotos_6690819-stock-illustration-halloween-background.jpg">
 	<h1>Homepage!</h1>
-	<nav>
+	<!-- <nav>
 		<a href="/costumes/new">Show the world your creation!</a>
-	</nav>
+	</nav> -->
 	<% for (let i = 0; i < costumes.length; i++) { %>
 		<a href="/costumes/<%=i%>">
-			<p><%= costumes[i].name %></p>
+			<p><%= costumes[i].costumeName %></p>
 		</a>
-		<form action="/costumes/<%=i%>?_method=DELETE" method="POST">
+		<!-- <form action="/costumes/<%=i%>?_method=DELETE" method="POST">
 			<input type="submit" value="Delete your masterpiece?" />
 		</form>
-		<a href="/costumes/<%=i%>/edit">Edit your creation!</a>
+		<a href="/costumes/<%=i%>/edit">Edit your creation!</a> -->
 	<% } %>
+		<br>
+		<br>
+		<a href="/costumes/signup"> Sign Up!</a> <br>
+        <a href="/costumes/login"> Log In?</a>
 </body>
 </html>
