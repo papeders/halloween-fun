@@ -6,11 +6,17 @@
     </head>
     <body>
         <h1>Halloween Fun!</h1>
-        <% if (costume) { %>
-        <h2> <%= costume.costumeName %> </h2>
+        <% if (costumes) { %>
+        <h2> <%= costumes.costumeName %> </h2>
         <br>
-        <img src=<%= costume.img%> alt="Costume" /> 
-        <p> <%= costume.description %> </p>
+        <img src=<%= costumes.img%> alt="Costume" /> 
+        <p> <%= costumes.description %> </p>
        <% } %>
+       		<form action="/costumes/<%=costumes.id%>?_method=DELETE" method="POST">
+			<input type="submit" value="Delete your masterpiece?" />
+		</form>
+		<a href="/costumes/<%=costumes.id%>/edit">Edit your creation!</a>
+
+       
     </body>
 </html> 

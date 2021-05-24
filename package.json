@@ -4,6 +4,7 @@
   "description": "Halloween Costume Idea Board\r <br>\r MVP:\r <br>\r HOMEPAGE DISPLAYING ARRAY ALSO WAY TO LOGIN OR SIGNUP.\r <br>\r   *user reads page\r   <br>\r LOG IN/SIGN UP RENDERS PROFILE.\r <br>\r   *user creates profile\r   <br>\r PROFILE SHOWS INFO -- PROVIDES LINK TO CREATE COSTUME FOR HOMEPAGE ARRAY.\r <br>\r   *create profile\r   <br>\r COSTUME PAGE ALLOWS USER TO CREATE OBJECT.\r <br>\r     *create costume\r     <br>\r AFTER OBJECT CREATED USER ABLE TO EDIT OR DELETE ITEM.\r <br>\r   *edit costume\r   <br>\r   *delete costume\r   <br>",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,12 @@
   },
   "homepage": "https://github.com/papeders/halloween-fun#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0"
   }
 }
