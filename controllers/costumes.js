@@ -9,12 +9,12 @@ const index = (req, res) => {
 
 const renderNew = (req, res) => {
 	User.findAll().then(allusers => {
-		User.findByPk(req.params.user.then(user => {
+		User.findByPk(req.params.user).then(user => {
 	res.render('new.ejs', {
 		users:allusers,
 		user:user
 	})   
-}))
+})
 })
 }
 const postCostume = (req, res) => {  
