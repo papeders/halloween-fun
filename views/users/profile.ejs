@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('../partials/boilerplate') %>
 <body>
     <h1> Welcome <%= user.name %>!</h1> 
     <br>
-    <label for="name"> Name:</label>
-    <input type="text" name="name" value=<%= user.name %>>
-    <br> <br>
-    <label for="username"> Username:</label>
-    <input type="text" name="username" value=<%= user.username %>>
-    <br> <br>
-    <label for="password"> Password:</label>
-    <input type="password" name="password" value=<%= user.password %>>
+    <label for="name"> Name: <%= user.name %> </label>
+    <br><br>
+    <label for="username"> Username: <%= user.username %> </label>
     <br><br>
     <form action="/users/<%=user.id %> ?_method=DELETE" method="POST">
         <input type="submit" value="Delete Profile?"/>
@@ -24,6 +12,7 @@
     <form action="/users/<%=user.id%>/edit">
         <input type="submit" value="Edit Profile?"/>
     </form>
+    <br>
     	<form>
 		<a href="/costumes/new">Show the world your creation!</a>
         </form>

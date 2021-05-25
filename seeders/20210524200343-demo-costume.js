@@ -1,17 +1,22 @@
 'use strict';
 
+const { urlencoded } = require("body-parser");
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('Costumes', [
       {
           costumeName: "Pennywise & Georgie",
-          img: "https://static0.srcdn.com/wordpress/wp-content/uploads/2017/09/IT-Pennywise-Red-Balloon.jpg",
-          description: "IT"
+          img: "(/halloween-fun/Halloween.jpg)",
+          description: "IT",
+          userId: 1
       },
-      {   costumeName: "Regan",
-          img: "C:/Users/oreb197/Pictures/Regan2018.jpg",
-          description: "Exorcist",
-  }
+      {
+        costumeName: "Regan",
+        img: "(/halloween-fun/Halloween.jpg)",
+        description: "IT2",
+        userId: 2
+    },
   ], {})
   },
 

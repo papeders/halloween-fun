@@ -1,4 +1,5 @@
 const Costume = require('../models').Costume;
+const User = require('../models').User
 
 const index = (req, res) => {
 	Costume.findAll().then(costumes => {
@@ -7,9 +8,15 @@ const index = (req, res) => {
 }
 
 const renderNew = (req, res) => {
-	res.render('new.ejs');
+	User.findAll().then(allusers => {
+		User.findByPk(req.params.user.then(user => {
+	res.render('new.ejs', {
+		users:allusers,
+		user:user
+	})   
+}))
+})
 }
-
 const postCostume = (req, res) => {  
 	Costume.create(req.body).then(newCostume => {
     res.redirect('/costumes');
@@ -17,7 +24,12 @@ const postCostume = (req, res) => {
 }
 
 const showCostume = (req, res) => {
-	Costume.findByPk(req.params.index).then(costumes => {
+	Costume.findByPk(req.params.index, {
+        include: [{
+            model: User,
+            attributes: ['name', 'id']
+        }]
+	}).then(costumes => {
 	res.render('show.ejs', {costumes: costumes});
 	})
     

@@ -1,22 +1,29 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
+<%- include('./partials/boilerplate') %>
     <body>
         <h1>Halloween Fun!</h1>
         <% if (costumes) { %>
-        <h2> <%= costumes.costumeName %> </h2>
+            <h2> <%= costumes.costumeName %> </h2>
         <br>
-        <img src=<%= costumes.img%> alt="Costume" /> 
+            <img src=<%= costumes.img%> alt="Costume" /> 
+        <br>
         <p> <%= costumes.description %> </p>
        <% } %>
-       		<form action="/costumes/<%=costumes.id%>?_method=DELETE" method="POST">
-			<input type="submit" value="Delete your masterpiece?" />
-		</form>
-		<a href="/costumes/<%=costumes.id%>/edit">Edit your creation!</a>
-
-       
+       <br>        
+        <% if (costumes.User.id) { %>
+        <p>Created By: <%= costumes.User.name %> </p>
+            <form action="/costumes">
+            <input type= "submit" value="Home">
+        </form>
+        <% } else { %>
+            <form action="/costumes/<%=costumes.id%>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete your masterpiece?" />
+            </form>
+            <form action="/costumes/<%=costumes.id%>/edit">
+            <input type= "submit" value="Edit your creation!">
+            </form>
+            <form action="/costumes">
+                <input type= "submit" value="Home">
+            </form>        
+            <% } %>      
     </body>
 </html> 
