@@ -1,4 +1,5 @@
 const User = require('../models').User;
+const Costume = require('../models').Costume;
 
 const signUp = (req, res) => {
     res.render('users/signup.ejs');
@@ -10,9 +11,18 @@ const postUser = (req, res) => {
  }
 const showUser = (req, res) => {
     User.findByPk(req.params.index).then(user => {
-        res.render('users/profile.ejs', {user: user});
-        
+        Costume.findByPk(req.params.index, {
+            include: [{
+                model: User,
+                attributes: ['name', 'id']
+            }]
+        }).then(costumes => {
+        res.render('users/profile.ejs', {
+            user: user,
+            costumes: costumes
+    })    
     })
+})
 }
 
 const renderLogin = (req, res) => {

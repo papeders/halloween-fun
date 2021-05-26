@@ -14,7 +14,23 @@
     </form>
     <br>
     	<form>
-		<a href="/costumes/new">Show the world your creation!</a>
+		    <a href="/costumes/new">Show the world your creation!</a>
         </form>
+      
+        <% if (costumes.User.id) { %> 
+            <p><%= costumes.costumeName%></p>
+        <form action="/costumes/<%=costumes.id%>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete your masterpiece?" />
+        </form>
+        <br>
+        <form action="/costumes/<%=costumes.id%>/edit">
+            <input type= "submit" value="Edit your creation!">
+        </form>  
+            <% } else{ %>  
+        <form action="/costumes">
+            <input type= "submit" value="Home">
+        </form> 
+                <% } %>
+                
 </body>
 </html>
