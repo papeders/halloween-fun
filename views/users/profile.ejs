@@ -1,37 +1,46 @@
 <%- include('../partials/boilerplate') %>
 <body>
-    <h1> Welcome <%= user.name %>!</h1> 
-    <br>
-    <label for="name"> Name: <%= user.name %> </label>
-    <br><br>
-    <label for="username"> Username: <%= user.username %> </label>
-    <br><br>
-    <form action="/users/<%=user.id %> ?_method=DELETE" method="POST">
-        <input type="submit" value="Delete Profile?"/>
-    </form> <br>
-    <form action="/users/<%=user.id%>/edit">
-        <input type="submit" value="Edit Profile?"/>
-    </form>
-    <br>
-    	<form>
-		    <a href="/costumes/new">Show the world your creation!</a>
-        </form>
-        <% if (user.Costumes.length > 0) { %>
-        <% for (let i =0; i < user.Costumes.length; i++) { %> 
-            <p><%= user.Costumes[i].costumeName%></p>
-        <form action="/costumes/<%=user.Costumes[i].id%>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete your masterpiece?" />
-        </form>
+
+<h1> Welcome <%= user.name %>!</h1> 
         <br>
-        <form action="/costumes/<%=user.Costumes[i].id%>/edit">
-            <input type= "submit" value="Edit your creation!">
-        </form> 
-    <% } %>
-         <% } else{ %>  
-        <form action="/costumes">
-            <input type= "submit" value="Home">
-        </form> 
-                <% } %>
+<label for="name"> Name: <%= user.name %> </label>
+        <br><br>
+<label for="username"> Username: <%= user.username %> </label>
+        <br><br>
+<form action="/users/<%=user.id %> ?_method=DELETE" method="POST">
+    <input type="submit" value="Delete Profile?"/>
+</form> 
+        <br>
+<form action="/users/<%=user.id%>/edit">
+        <input type="submit" value="Edit Profile?"/>
+</form>
+        <br>
+<form>
+    <a href="/costumes/new">Show the world your creation!</a>
+    <br><br>
+</form>
+
+<% if (user.Costumes.length > 0) { %>
+    <% for (let i =0; i < user.Costumes.length; i++) { %> 
+        <p><%= user.Costumes[i].costumeName%></p>
+                <form action="/costumes/<%=user.Costumes[i].id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete your masterpiece?" />
+                </form>
+                        <br>
+                <form action="/costumes/<%=user.Costumes[i].id%>/edit">
+                    <input type= "submit" value="Edit your creation!">
+                </form> 
+                <br><br>
+                <form action="/costumes">
+                    <input type= "submit" value="Home">
+                </form>
+<% } %>
+
+<% } else{ %>  
+    <form action="/costumes">
+        <input type= "submit" value="Home">
+    </form> 
+<% } %>
                 
 </body>
 </html>

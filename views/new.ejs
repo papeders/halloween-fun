@@ -15,11 +15,12 @@
             <input type="text" name='description'/>
         <br>
         <br>
-        <select name="userId"
-        <% for (let i=0; i < users.length; i++) { %>
-            <option value="<%= users[i].id %>"> <%=users[i].name%> </option>
-            <% } %>
-        </select>
+        <select name= "userId">
+            <% for (let i=0; i < users.length; i++) { %>
+                <option value = "<%= users[i].id %>"> <%=users[i].name%> 
+                <% } %>
+            </select>
+
             <input type="submit" name="" value="Here goes nothing!"/>
         </form>
             

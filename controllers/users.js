@@ -14,8 +14,7 @@ const showUser = (req, res) => {
         include: [{
             model: Costume
         }]
-    }).then(user => {    
-        console.log(user)    
+    }).then(user => {        
         res.render('users/profile.ejs', {
             user: user,
     })    
