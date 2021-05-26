@@ -10,18 +10,15 @@ const postUser = (req, res) => {
     })
  }
 const showUser = (req, res) => {
-    User.findByPk(req.params.index).then(user => {
-        Costume.findByPk(req.params.index, {
-            include: [{
-                model: User,
-                attributes: ['name', 'id']
-            }]
-        }).then(costumes => {
+    User.findByPk(req.params.index, {
+        include: [{
+            model: Costume
+        }]
+    }).then(user => {    
+        console.log(user)    
         res.render('users/profile.ejs', {
             user: user,
-            costumes: costumes
     })    
-    })
 })
 }
 
