@@ -7,15 +7,15 @@ module.exports = {
     await queryInterface.bulkInsert('Costumes', [
       {
           costumeName: "Pennywise & Georgie",
-          img: "(/halloween-fun/Halloween.jpg)",
+          img: "https://res.cloudinary.com/dqutmt6jn/image/upload/v1622064044/Halloween_e2t7li.jpg",
           description: "IT",
           userId: 1
       },
       {
-        costumeName: "Regan",
-        img: "(/halloween-fun/Halloween.jpg)",
-        description: "IT2",
-        userId: 2
+        costumeName: "Harry Potter",
+        img: "https://res.cloudinary.com/dqutmt6jn/image/upload/v1622064279/Ironhide_q52q29.jpg",
+        description: "Harry Potter 2020",
+        userId: 3
     },
   ], {})
   },
