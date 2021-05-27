@@ -1,7 +1,88 @@
-h1 {
-    color: blueviolet;
-    display: flex;
-    align-content: center;
-    
+body{
+   background-color:burlywood; 
+   font-family: 'Single Day', cursive;
+   font-size: 20pt;   
+}
+header{
+    text-align: center;
+}
+h1{
+    font-family: 'Single Day', cursive;
+    font-size: 30pt;
+    margin-bottom: 9px; 
+}
 
-};
+.gray{
+font-family: 'Single Day', cursive;
+font-size: 20pt;  
+color: rgb(124, 112, 112);
+border-radius: 10px;
+transition-duration: 0.4s;
+border: 1px solid black;
+margin-top: 8px;
+}
+.gray:hover{
+    background-color:rgb(199, 199, 199);
+    color: white;
+    border-radius: 10px;
+}
+.black{
+    font-family: 'Single Day', cursive;
+    font-size: 20pt;  
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    border: 1px solid black;
+    margin-top: 8px;
+    
+}
+.black:hover{
+        background-color:rgb(199, 199, 199);
+        color: white;
+        border-radius: 10px;
+}
+.orange{
+    font-family: 'Single Day', cursive;
+    font-size: 20pt;  
+    color: orange;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    border: 1px solid black;
+    margin-top: 8px;
+    
+}
+.orange:hover{
+        background-color:rgb(199, 199, 199);
+        color: white;
+        border-radius: 10px;
+}
+.sidebar {
+    float: right;
+    align-items: center;
+    width:15%;
+    margin-right: 26px;
+}
+.entries {
+    float: left;
+    align-items: center;
+    width:15%;
+}
+.main{
+    position:absolute;
+    width: 65%    
+}
+.left {
+    float: left;
+    align-items: center;
+    width:25%;
+}
+.describe{
+    font-family: 'Single Day', cursive;
+    font-size: 18pt;
+    height: 300px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    border: 1px solid black;
+    margin-top: 8px;
+    
+}
+

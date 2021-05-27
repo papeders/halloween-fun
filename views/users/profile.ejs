@@ -1,46 +1,49 @@
 <%- include('../partials/boilerplate') %>
 <body>
 
-<h1> Welcome <%= user.name %>!</h1> 
+<header> 
+    <h1> Welcome <%= user.name %>!</h1> 
+</header>
+<section class="entries"> 
+    <label for="name"> Name: <%= user.name %> </label>
         <br>
-<label for="name"> Name: <%= user.name %> </label>
-        <br><br>
-<label for="username"> Username: <%= user.username %> </label>
-        <br><br>
-<form action="/users/<%=user.id %> ?_method=DELETE" method="POST">
-    <input type="submit" value="Delete Profile?"/>
-</form> 
+    <label for="username"> Username: <%= user.username %> </label>
         <br>
-<form action="/users/<%=user.id%>/edit">
-        <input type="submit" value="Edit Profile?"/>
-</form>
-        <br>
-<form>
-    <a href="/costumes/new">Show the world your creation!</a>
-    <br><br>
-</form>
-
-<% if (user.Costumes.length > 0) { %>
-    <% for (let i =0; i < user.Costumes.length; i++) { %> 
-        <p><%= user.Costumes[i].costumeName%></p>
-                <form action="/costumes/<%=user.Costumes[i].id%>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete your masterpiece?" />
-                </form>
-                        <br>
-                <form action="/costumes/<%=user.Costumes[i].id%>/edit">
-                    <input type= "submit" value="Edit your creation!">
-                </form> 
-                <br><br>
-                <form action="/costumes">
-                    <input type= "submit" value="Home">
-                </form>
-<% } %>
-
-<% } else{ %>  
-    <form action="/costumes">
-        <input type= "submit" value="Home">
+    <form action="/users/<%=user.id %> ?_method=DELETE" method="POST">
+        <input class="orange" type="submit" value="Delete Profile?"/>
     </form> 
-<% } %>
-                
+    <form action="/users/<%=user.id%>/edit">
+        <input class="gray" type="submit" value="Edit Profile?"/>
+    </form>
+    <form action="/costumes/new">
+        <input class="black" type="submit" value="Create Costume!"/>
+    </form>
+</section>
+
+<section>
+		<img class="main" src= "https://cdn.theatlantic.com/thumbor/XZ5sln-0aytWmk2tAFUJQq_OXkg=/0x62:1834x1017/960x500/media/img/mt/2015/09/rocky_horror_image_3/original.jpg"  alt="Rocky Horror">
+</section>
+
+<section class="sidebar">
+    <% if (user.Costumes.length > 0) { %>
+        <% for (let i =0; i < user.Costumes.length; i++) { %> 
+            <p><%= user.Costumes[i].costumeName%></p>
+                <form action="/costumes/<%=user.Costumes[i].id%>?_method=DELETE" method="POST">
+                    <input class="black" type="submit" value="Delete your masterpiece?" />
+                </form>
+                <form action="/costumes/<%=user.Costumes[i].id%>/edit">
+                    <input class="orange" type= "submit" value="Edit your creation!">
+                </form> 
+                <form action="/costumes">
+                    <input class="black" type= "submit" value="Home">
+                </form>
+    <% } %>
+        <% } else{ %>  
+                <form action="/costumes">
+                    <input class="orange" type= "submit" value="Home">
+                </form> 
+    <% } %>
+</section>  
+
 </body>
 </html>

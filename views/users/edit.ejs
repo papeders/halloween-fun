@@ -5,19 +5,21 @@
 
 <form action="/users/<%=user.id%> ?_method=PUT" method="POST">
     <label for="name"> Current Name: <%= user.name %> </label>
-            <br><br>
-    <label for="name"> Updated Name:</label>    
-    <input type="text" name="name">
+            <br>
+    <label for="name"> Updated Name:</label>  
+        <br>  
+    <input class="black" type="text" name="name">
             <br><br>
     <label for="username"> Current Username: <%= user.username %> </label>
-            <br><br>
-    <label for="name"> Updated Username:</label>
-    <input type="text" name="username" >
+            <br>
+    <label for="name"> Updated Username:</label><br>
+    <input class="black" type="text" name="username" >
             <br><br>
     <label for="password"> Password:</label>
-    <input type="password" name="password" > 
+    <br>
+    <input class="black" type="password" name="password" > 
             <br><br>
-    <input type="submit" name="" value="Update Profile!"/>
+    <input class="black" type="submit" name="" value="Update Profile!"/>
 </form>
 
 </body>

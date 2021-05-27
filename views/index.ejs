@@ -1,17 +1,31 @@
 <%- include('./partials/boilerplate') %>
-<link href="/css/index.css" rel="stylesheet" type="text/css">
+<body>
 
+<header> 
 	<h1>Costume Clout</h1>
+</header>
+
+<aside class=" entries" > 
+	<h1>Costume Entries</h1>
 	<% for (let i = 0; i < costumes.length; i++) { %>
-		<a href="/costumes/<%=costumes[i].id%>">
-			<p><%= costumes[i].costumeName%></p>
+	<form  action="/costumes/<%=costumes[i].id%>">
+		<input class="gray" type="submit" value="<%= costumes[i].costumeName%>" />
+	</form>
 	<% } %>
-		<br><br>
-		<form action="/users/signup">
-			<input type="submit" value="Sign Up to add your creation!" />
-		</form>
-		<form action="/users/login">
-			<input type="submit" value="Log In." />
-		</form>
+</aside>
+<section>
+	<p> Costume parties are the best even if you are the only one who went overboard! <br>
+		Show off your creation and share your costumes with us! </p>
+	<img class="main" src= "http://images2.fanpop.com/images/photos/8000000/Lacey-in-Mean-Girls-lacey-chabert-8023331-853-480.jpg"  alt="Mean Girls">
+</section>
+<aside class="sidebar">
+	<form action="/users/signup">
+		<input class="black" type="submit" value="Sign Up to add your creation." />
+	</form>
+	<form action="/users/login">
+		<input class= "orange" type="submit" value="Log In Costumier!" />
+	</form>
+</aside>
+<footer></footer>
 </body>
 </html>

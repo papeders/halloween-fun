@@ -3,16 +3,13 @@
         <h1>Halloween Fun!</h1>
         <% if (costumes) { %>
             <h2> <%= costumes.costumeName %> </h2>
-        <br>
             <img src=<%= costumes.img%> alt="Costume" /> 
-        <br>
         <p> <%= costumes.description %> </p>
-       <% } %>
-       <br>        
+       <% } %>        
         <% if (costumes.User.id) { %>
         <p>Created By: <%= costumes.User.name %> </p>
         <form action="/costumes">
-            <input type= "submit" value="Home">
+            <input class= "orange" type= "submit" value="Home">
         </form>
         <% } else { %>
             <form action="/costumes">
