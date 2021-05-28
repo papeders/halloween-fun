@@ -6,7 +6,6 @@
 ![PlanTwo](https://user-images.githubusercontent.com/82845381/119997494-662a1b80-bf95-11eb-8def-75e049c2d1b2.jpg)
 -------------------------------------------------------------------------------------------------------------------------------------
 # Technologies Used:
-<br>
 HTML <br>
 CSS <br>
 Expression <br>
