@@ -7,15 +7,15 @@
 -------------------------------------------------------------------------------------------------------------------------------------
 # Technologies Used:
 <br>
-HTML
-CSS
-Expression
-Javascript
-Body-Parser
-EJS
-Method-Override
-Sequelize
-Sequlize CLI
-PG
+HTML <br>
+CSS <br>
+Expression <br>
+Javascript <br>
+Body-Parser <br>
+EJS <br>
+Method-Override <br>
+Sequelize <br>
+Sequlize CLI <br>
+PG <br>
 Express-Session -- for future functionality.
 
