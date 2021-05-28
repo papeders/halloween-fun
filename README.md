@@ -36,4 +36,10 @@ Delete Costume <br>
 ![P2P4](https://user-images.githubusercontent.com/82845381/119999682-9e325e00-bf97-11eb-85fe-bd47a6654994.jpg)
 ![P2P5](https://user-images.githubusercontent.com/82845381/119999688-9f638b00-bf97-11eb-9a53-fb58b13c1ac2.jpg)
 
+# Planned Features:
+---------------------------------------------------------------------------------------------------------------------------------------
+Express-sessions is my next deliverable. Express-sessions is used as session management in node.js and it helps save data in key-value form. Sessions assigns every user a unique session thus allowing your APR or website to store the user state. 
+
+# Repository 
+https://github.com/papeders/halloween-fun
 
