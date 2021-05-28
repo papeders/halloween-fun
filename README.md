@@ -1,4 +1,4 @@
-#Costume Clout
+#Costume Clout <br>
 A fun application that allows users to share their costume creations as well as view other costumes creations.
 -------------------------------------------------------------------------------------------------------------------------------------
 
