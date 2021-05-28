@@ -1,32 +1,32 @@
 <%- include('./partials/boilerplate') %>
-    <body>
-        <header>
-            <h1>Show the world your creation!</h1>
-        </header>
+<body>
+    <header>
+        <h1>Show the world your creation!</h1>
+    </header>
        
-<section class="entries">
+    <section class="entries">
         <form action='/costumes' method="POST">
             <label for="name"> Name:</label>
-            <input class= "orange" type="text" name="costumeName" />
-        <br>
+                <input class= "orange" type="text" name="costumeName" />
+                    <br>
             <label for="name"> Image:</label>
-            <input class= "black" type="text" name="img"/>
-        <br>
+                <input class= "black" type="text" name="img"/>
+                    <br>
             <label for="name"> Description:</label>
-            <input class= "describe" type="text" name='description'/>
-        <br><br>
-        <select class= "orange" name= "userId">
-            <% for (let i=0; i < users.length; i++) { %>
-                <option value = "<%= users[i].id %>"> <%=users[i].name%> 
+                <textarea class= "describe" type="text" name='description'> </textarea>
+                    <br><br>
+            <select class= "orange" name= "userId">
+                <% for (let i=0; i < users.length; i++) { %>
+                    <option value = "<%= users[i].id %>"> <%=users[i].name%> 
                 <% } %>
             </select>
-            <br><br>
-            <input class= "gray" type="submit" name="" value="Here goes nothing!"/>
+                    <br><br>
+                <input class= "gray" type="submit" name="" value="Here goes nothing!"/>
         </form>
-</section>  
-<section>
-    <img class="main" src= https://www.thewrap.com/wp-content/uploads/2017/05/pennywise-IT.jpg alt="IT">
-</section>
+    </section>  
+    <section>
+        <img class="main" src= https://www.thewrap.com/wp-content/uploads/2017/05/pennywise-IT.jpg alt="IT">
+    </section>
           
     </body>
 </html>

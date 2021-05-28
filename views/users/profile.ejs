@@ -4,11 +4,12 @@
 <header> 
     <h1> Welcome <%= user.name %>!</h1> 
 </header>
+
 <section class="entries"> 
     <label for="name"> Name: <%= user.name %> </label>
-        <br>
+            <br>
     <label for="username"> Username: <%= user.username %> </label>
-        <br>
+            <br>
     <form action="/users/<%=user.id %> ?_method=DELETE" method="POST">
         <input class="orange" type="submit" value="Delete Profile?"/>
     </form> 

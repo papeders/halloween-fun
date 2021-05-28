@@ -1,25 +1,25 @@
 <%- include('../partials/boilerplate') %>
 <body>
-
+        
 <h1> Are you sure you want to edit your profile <%= user.name %>?</h1>
 
 <form action="/users/<%=user.id%> ?_method=PUT" method="POST">
     <label for="name"> Current Name: <%= user.name %> </label>
-            <br>
+           <br>
     <label for="name"> Updated Name:</label>  
-        <br>  
-    <input class="black" type="text" name="name">
+            <br>  
+        <input class="black" type="text" name="name">
             <br><br>
     <label for="username"> Current Username: <%= user.username %> </label>
             <br>
     <label for="name"> Updated Username:</label><br>
-    <input class="black" type="text" name="username" >
+        <input class="black" type="text" name="username" >
             <br><br>
     <label for="password"> Password:</label>
-    <br>
-    <input class="black" type="password" name="password" > 
+            <br>
+        <input class="black" type="password" name="password" > 
             <br><br>
-    <input class="black" type="submit" name="" value="Update Profile!"/>
+        <input class="black" type="submit" name="" value="Update Profile!"/>
 </form>
 
 </body>

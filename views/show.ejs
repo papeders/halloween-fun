@@ -1,20 +1,23 @@
 <%- include('./partials/boilerplate') %>
-    <body>
-        <h1>Halloween Fun!</h1>
+<body>
+    <h1>Halloween Fun!</h1>
+    
+    <section class="show"> 
         <% if (costumes) { %>
             <h2> <%= costumes.costumeName %> </h2>
             <img src=<%= costumes.img%> alt="Costume" /> 
-        <p> <%= costumes.description %> </p>
+            <p> <%= costumes.description %> </p>
        <% } %>        
         <% if (costumes.User.id) { %>
-        <p>Created By: <%= costumes.User.name %> </p>
-        <form action="/costumes">
-            <input class= "orange" type= "submit" value="Home">
-        </form>
+            <p>Created By: <%= costumes.User.name %> </p>
+            <form action="/costumes">
+                <input class= "orange" type= "submit" value="Home">
+            </form>
         <% } else { %>
             <form action="/costumes">
                 <input type= "submit" value="Home">
             </form>        
-            <% } %>      
+            <% } %>   
+    </section>   
     </body>
 </html> 

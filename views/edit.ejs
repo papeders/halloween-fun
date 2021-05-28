@@ -1,24 +1,24 @@
 <%- include('./partials/boilerplate') %>
 <body>
-    <h1> Edit Costume Page! </h1>
-    <form action="/costumes/<%=costumes.id%>?_method=PUT" method="POST">
+<h1> Edit Costume Page! </h1>
+
+<form action="/costumes/<%=costumes.id%>?_method=PUT" method="POST">
         
     <label for="costumeName"> Current Name: <%= costumes.costumeName %> </label>
-    <br>
-        <label for="costumeName"> Updated Name:</label>    
+            <br>
+    <label for="costumeName"> Updated Name:</label>    
         <input class="black" type="text" name="costumeName">
-    <br><br>
+            <br><br>
     <label for="img"> Current Image: <%= costumes.img %> </label>
-    <br>
-        <label for="img"> Updated Image: </label>
+            <br>
+    <label for="img"> Updated Image: </label>
         <input class="black" type="text" name="img"/>
-    <br><br>
+            <br><br>
     <label for="description"> Current Description: <%= costumes.description %> </label>
-    <br>
-        <label for="description"> Updated Description: </label>
-        <input class="black" type="text" name="description"/>
-    <br>
-    <br>
+            <br>
+    <label for="description"> Updated Description: </label>
+        <textarea class="black" type="text" name="description"></textarea>
+            <br><br>
         <input class="black" type="submit" name="" value="Update Costume!"/>
     </form>
 </body>
