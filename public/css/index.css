@@ -13,13 +13,13 @@ h1{
 }
 
 .gray{
-font-family: 'Single Day', cursive;
-font-size: 20pt;  
-color: rgb(124, 112, 112);
-border-radius: 10px;
-transition-duration: 0.4s;
-border: 1px solid black;
-margin-top: 8px;
+    font-family: 'Single Day', cursive;
+    font-size: 20pt;  
+    color: rgb(124, 112, 112);
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    border: 1px solid black;
+    margin-top: 8px;
 }
 .gray:hover{
     background-color:rgb(199, 199, 199);
@@ -32,13 +32,12 @@ margin-top: 8px;
     border-radius: 10px;
     transition-duration: 0.4s;
     border: 1px solid black;
-    margin-top: 8px;
-    
+    margin-top: 8px;    
 }
 .black:hover{
-        background-color:rgb(199, 199, 199);
-        color: white;
-        border-radius: 10px;
+    background-color:rgb(199, 199, 199);
+    color: white;
+    border-radius: 10px;
 }
 .orange{
     font-family: 'Single Day', cursive;
@@ -47,13 +46,12 @@ margin-top: 8px;
     border-radius: 10px;
     transition-duration: 0.4s;
     border: 1px solid black;
-    margin-top: 8px;
-    
+    margin-top: 8px;    
 }
 .orange:hover{
-        background-color:rgb(199, 199, 199);
-        color: white;
-        border-radius: 10px;
+    background-color:rgb(199, 199, 199);
+    color: white;
+    border-radius: 10px;
 }
 .sidebar {
     float: right;
@@ -85,6 +83,6 @@ margin-top: 8px;
     margin-top: 8px;   
 }
 .show {
-        float: left;
-        width:25%;
+    float: left;
+    width:25%;
     }
